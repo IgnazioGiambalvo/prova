@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B9823927A32FBD51C621FE5 /* Pods_Prova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8869B62F9481E0D5352CC0 /* Pods_Prova.framework */; };
 		55782CC924AF6CA500835ED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55782CC824AF6CA500835ED6 /* AppDelegate.swift */; };
 		55782CCD24AF6CA500835ED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55782CCC24AF6CA500835ED6 /* ViewController.swift */; };
 		55782CD024AF6CA500835ED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55782CCE24AF6CA500835ED6 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D18B9DD9A993F7816AD8287 /* Pods-Prova.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prova.release.xcconfig"; path = "Target Support Files/Pods-Prova/Pods-Prova.release.xcconfig"; sourceTree = "<group>"; };
 		55782CC524AF6CA500835ED6 /* Prova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prova.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55782CC824AF6CA500835ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55782CCC24AF6CA500835ED6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		55782CD124AF6CA500835ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55782CD424AF6CA500835ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55782CD624AF6CA500835ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		824BD20E2057BF3336A6A106 /* Pods-Prova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prova.debug.xcconfig"; path = "Target Support Files/Pods-Prova/Pods-Prova.debug.xcconfig"; sourceTree = "<group>"; };
+		CD8869B62F9481E0D5352CC0 /* Pods_Prova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B9823927A32FBD51C621FE5 /* Pods_Prova.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B03F05D933D46737A2C6EEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD8869B62F9481E0D5352CC0 /* Pods_Prova.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2456480A42C00EFB79196BFB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				824BD20E2057BF3336A6A106 /* Pods-Prova.debug.xcconfig */,
+				0D18B9DD9A993F7816AD8287 /* Pods-Prova.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		55782CBC24AF6CA500835ED6 = {
 			isa = PBXGroup;
 			children = (
 				55782CC724AF6CA500835ED6 /* Prova */,
 				55782CC624AF6CA500835ED6 /* Products */,
+				2456480A42C00EFB79196BFB /* Pods */,
+				1B03F05D933D46737A2C6EEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55782CD924AF6CA500835ED6 /* Build configuration list for PBXNativeTarget "Prova" */;
 			buildPhases = (
+				A4E019006A4D914153D51ABE /* [CP] Check Pods Manifest.lock */,
 				55782CC124AF6CA500835ED6 /* Sources */,
 				55782CC224AF6CA500835ED6 /* Frameworks */,
 				55782CC324AF6CA500835ED6 /* Resources */,
+				0453F06EF975C978BC95352E /* [CP] Embed Pods Frameworks */,
+				55ECB88924AF702B00F7E6F6 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0453F06EF975C978BC95352E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Prova/Pods-Prova-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Prova/Pods-Prova-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Prova/Pods-Prova-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55ECB88924AF702B00F7E6F6 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		A4E019006A4D914153D51ABE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Prova-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		55782CC124AF6CA500835ED6 /* Sources */ = {
@@ -278,6 +365,7 @@
 		};
 		55782CDA24AF6CA500835ED6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 824BD20E2057BF3336A6A106 /* Pods-Prova.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +384,7 @@
 		};
 		55782CDB24AF6CA500835ED6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D18B9DD9A993F7816AD8287 /* Pods-Prova.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
